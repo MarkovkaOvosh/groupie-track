@@ -1,3 +1,3 @@
-module groupie-track
+module gropi
 
 go 1.19

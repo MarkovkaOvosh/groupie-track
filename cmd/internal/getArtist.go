@@ -8,7 +8,7 @@ import (
 
 var ArtistUrl string = "https://groupietrackers.herokuapp.com/api"
 
-func GetArtist() []Artist {
+func GetArtists() []Artist {
 	r, err := http.Get(ArtistUrl + "/artists")
 	if err != nil {
 		fmt.Println(err)
@@ -24,7 +24,7 @@ func GetArtist() []Artist {
 	return list
 }
 
-func GetLocation() indexLocation {
+func GetLocations() indexLocation {
 	var list indexLocation
 
 	r, err := http.Get(ArtistUrl + "/locations")

@@ -1,0 +1,53 @@
+body {
+    background-color: #2196F3;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  .title{
+    font-size: 50px;
+  }
+  h1 {
+    color:goldenrod;
+    text-align: center;
+    font-family: LOTR ;
+    font-size: 25px;
+  }
+  .card{
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid salmon;
+    border-radius: 20px;
+  }
+  /* 
+  @font-face {
+  font-family: LOTR ;
+  src: url(../fonts/fanjofey.ttf);
+  font-style: normal;
+  font-weight: normal;
+  } */
+  ::placeholder{
+   color: goldenrod; 
+   font-family: LOTR;
+   font-size: 20px;
+   text-align: center;
+  }
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    
+    padding: 10px;
+    border: blue
+  }
+    a:link, a:visited {
+      color: goldenrod 
+    }
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
