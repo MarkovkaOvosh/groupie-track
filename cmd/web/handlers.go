@@ -6,6 +6,8 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"strconv"
+	"strings"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
@@ -13,23 +15,54 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		log.Fatalln(http.StatusMethodNotAllowed)
 	}
 
-	// if r.URL.Path != "/" {
-	// 	log.Fatalln("Url Error")
-	// }
-
 	files := []string{
 		"./ui/html/home.html",
 	}
 
 	ts, err := template.ParseFiles(files...)
 	if err != nil {
-		fmt.Println("aaskdmlkas")
+		fmt.Println(err)
 		return
 	}
 
-	list := internal.GetArtists()
-	if err = ts.Execute(w, list); err != nil {
-		fmt.Println("Execute ")
+	err = internal.GetAllInfo()
+	if err != nil {
+		return
+	}
+
+	if err := ts.Execute(w, &internal.List); err != nil {
+		fmt.Println(err)
+		return
+	}
+}
+
+func artPage(w http.ResponseWriter, r *http.Request) {
+	files := []string{
+		"./ui/html/art.html",
+	}
+
+	ts, err := template.ParseFiles(files...)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	strUrl := strings.Split(r.URL.Path, "/")
+	idArtist, err := strconv.Atoi(strUrl[2])
+	if err != nil {
+		return
+	}
+
+	err = internal.GetAllInfo()
+	if err != nil {
+		return
+	}
+
+	res := oneArtAllData(idArtist)
+	res.Art.Data = res.Rel.Data
+
+	if err := ts.Execute(w, res.Art); err != nil {
+		fmt.Println(err)
 		return
 	}
 }

@@ -10,31 +10,40 @@ type Artist struct {
 	Locations    string   `json:"locations"`
 	ConcertDates string   `json:"concertDates"`
 	Relations    string   `json:"relations"`
-}
-
-type indexLocation struct {
-	Index []location `json:"index"`
-}
-
-type location struct {
-	Id        int      `json:"id"`
-	Locations []string `json:"locations"`
-	Dates     string   `json:"dates"`
-}
-
-type indexDates struct {
-	Index []date `json:"index"`
-}
-
-type date struct {
-	Id    int      `json:"id"`
-	Dates []string `json:"dates"`
+	//
+	Data map[string][]string `json:"datesLocations"`
 }
 
 type indexRelations struct {
-	Index []relations `json:"index"`
+	Index []Relations `json:"index"`
 }
 
-type relations struct {
+type Relations struct {
 	Data map[string][]string `json:"datesLocations"`
 }
+
+type allInfo struct {
+	artists []Artist
+	rel     indexRelations
+}
+
+// var Artists []Artist
+
+// type indexLocation struct {
+// 	Index []location `json:"index"`
+// }
+
+// type location struct {
+// 	Id        int      `json:"id"`
+// 	Locations []string `json:"locations"`
+// 	Dates     string   `json:"dates"`
+// }
+
+// type indexDates struct {
+// 	Index []date `json:"index"`
+// }
+
+// type date struct {
+// 	Id    int      `json:"id"`
+// 	Dates []string `json:"dates"`
+// }

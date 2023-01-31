@@ -13,13 +13,15 @@
         <div class="grid-container">
             {{range .}}
             <div class="card">
-                <a href="/artist?id={{ .Id}}" > 
+                <a href="/artist/{{ .Id}}" > 
                 
-                <img src="{{.Ava}}">
+                <img src="{{.Img}}">
                 <h1>
                     {{ .Name }}
                 </h1>
                 </a>
+            </div>
+            <div>
             </div>
        
        

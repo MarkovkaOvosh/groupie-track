@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/ui/static/style.css'>
+    <link rel="shortcut icon" href="/ui/image/01.png" type="image/x-icon">
+    <title>Artist</title>
+</head>
+<body>
+    <div class="allcontent">
+        <div class="head-cont">
+            <h3><a style="text-decoration: none;" href="/">Groupie Tracker</a></h3>
+        </div>
+        <div class="divimg">
+            <img class="imgart" src="{{  .Img }}" alt="img">
+        </div>
+        <div>
+            <div>
+                CONTRACTOR
+            </div>
+                <h1>
+                    {{ .Name}}
+                </h1>
+        </div>
+        <div>
+             {{ range .Members}}
+                <li>
+                    {{ . }}
+                </li>
+            {{ end }}
+        </div>
+        <div class="creatdiv">Creation Date: {{  .CreationDate }}</div>
+        <div>First Album: {{ .FirstAlbum }}</div>
+        <br>
+        <div>
+            {{ range $city, $dates := .Data}}
+            {{ $city }}:
+            {{ range $dates }}
+                    {{.}};
+                    <br>
+                {{end}}
+            {{ end }}
+       </div>
+    </div>
+</body>
+</html>
