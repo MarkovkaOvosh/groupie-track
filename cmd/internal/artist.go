@@ -26,24 +26,3 @@ type allInfo struct {
 	artists []Artist
 	rel     indexRelations
 }
-
-// var Artists []Artist
-
-// type indexLocation struct {
-// 	Index []location `json:"index"`
-// }
-
-// type location struct {
-// 	Id        int      `json:"id"`
-// 	Locations []string `json:"locations"`
-// 	Dates     string   `json:"dates"`
-// }
-
-// type indexDates struct {
-// 	Index []date `json:"index"`
-// }
-
-// type date struct {
-// 	Id    int      `json:"id"`
-// 	Dates []string `json:"dates"`
-// }

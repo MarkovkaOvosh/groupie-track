@@ -1,9 +1,9 @@
 package main
 
 import (
-	"gropi/cmd/web"
+	web "gropi/cmd/web/serverAndRoutes"
 )
 
 func main() {
-	web.Serv()
+	web.Run()
 }

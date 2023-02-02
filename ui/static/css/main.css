@@ -1,5 +1,5 @@
 body {
-    background-color: #2196F3;
+    background-color: #7DCFB6;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,28 +10,24 @@ body {
     font-size: 50px;
   }
   h1 {
-    color:goldenrod;
+    color:black;
     text-align: center;
-    font-family: LOTR ;
     font-size: 25px;
   }
   .card{
     width: 100%;
     max-width: 300px;
     text-align: center;
-    border: 1px solid salmon;
+    border: 3px solid #33CA7F;
     border-radius: 20px;
   }
-  /* 
-  @font-face {
-  font-family: LOTR ;
-  src: url(../fonts/fanjofey.ttf);
-  font-style: normal;
-  font-weight: normal;
-  } */
+  img {
+    width: 100%;
+    border-radius: 20px;
+   }
+  
   ::placeholder{
-   color: goldenrod; 
-   font-family: LOTR;
+  
    font-size: 20px;
    text-align: center;
   }
@@ -40,14 +36,19 @@ body {
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-    
     padding: 10px;
-    border: blue
+    border: #FC9F5B;
   }
-    a:link, a:visited {
-      color: goldenrod 
-    }
-    a:link { text-decoration: none; }
-    a:visited { text-decoration: none; }
-    a:hover { text-decoration: none; }
-    a:active { text-decoration: none; }
+
+/* scroll bar */
+  ::-webkit-scrollbar{
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track{
+    background: gray;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: red;
+  }
+ 

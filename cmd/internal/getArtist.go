@@ -43,37 +43,3 @@ func GetAllInfo() error {
 	}
 	return nil
 }
-
-// func GetLocations() indexLocation {
-// 	var list indexLocation
-
-// 	r, err := http.Get(ArtistUrl + "/locations")
-// 	if err != nil {
-// 		fmt.Println(err)
-// 	}
-
-// 	defer r.Body.Close()
-
-// 	if err := json.NewDecoder(r.Body).Decode(&list); err != nil {
-// 		fmt.Println(err)
-// 	}
-
-// 	return list
-// }
-
-// func GetDates() indexDates {
-// 	var list indexDates
-
-// 	r, err := http.Get(ArtistUrl + "/dates")
-// 	if err != nil {
-// 		fmt.Println(err)
-// 	}
-
-// 	defer r.Body.Close()
-
-// 	if err := json.NewDecoder(r.Body).Decode(&list); err != nil {
-// 		fmt.Println(err)
-// 	}
-
-// 	return list
-// }
