@@ -26,11 +26,7 @@ body {
     border-radius: 20px;
    }
   
-  ::placeholder{
   
-   font-size: 20px;
-   text-align: center;
-  }
   .grid-container {
     display: flex;
     flex-wrap: wrap;
